@@ -1,0 +1,112 @@
+[
+  {
+    "code": "COA_AMBIGUOUS_CF",
+    "severity": "needs_human",
+    "subject": "COA:1150",
+    "message": "cash-flow category for 'Other Current Assets' is TBD",
+    "facts": {}
+  },
+  {
+    "code": "COA_EMPTY_HEADER",
+    "severity": "warn",
+    "subject": "COA:1290",
+    "message": "header 'Other Assets' has no child accounts",
+    "facts": {}
+  },
+  {
+    "code": "COA_AMBIGUOUS_CF",
+    "severity": "needs_human",
+    "subject": "COA:2170",
+    "message": "cash-flow category for 'Intercompany Payable' is TBD",
+    "facts": {}
+  },
+  {
+    "code": "COA_NO_NORMAL_BALANCE",
+    "severity": "warn",
+    "subject": "COA:7000",
+    "message": "'Non-Operating Items' has no normal balance",
+    "facts": {}
+  },
+  {
+    "code": "TB_DUPLICATE_ROW",
+    "severity": "needs_human",
+    "subject": "trial_balance.csv:49",
+    "message": "6310/USD also appears at trial_balance.csv:48",
+    "facts": {
+      "first": "trial_balance.csv:48",
+      "amount": "38500.00"
+    }
+  },
+  {
+    "code": "TB_ORPHAN_ACCOUNT",
+    "severity": "needs_human",
+    "subject": "trial_balance.csv:63",
+    "message": "current TB account 9999 'Suspense - Unmapped' is not in the COA",
+    "facts": {
+      "amount": "12400.00"
+    }
+  },
+  {
+    "code": "TB_ORPHAN_ACCOUNT",
+    "severity": "needs_human",
+    "subject": "prior_period_tb.csv:34",
+    "message": "prior TB account 6905 'Sundry Operating Expenses' is not in the COA",
+    "facts": {
+      "amount": "132000.00"
+    }
+  },
+  {
+    "code": "PRIOR_ACCOUNT_GONE",
+    "severity": "needs_human",
+    "subject": "prior_period_tb.csv:34",
+    "message": "prior-period account 6905 'Sundry Operating Expenses' has no current-period row and is not in the COA (renamed?)",
+    "facts": {}
+  },
+  {
+    "code": "PRIOR_LARGE_MOVE",
+    "severity": "warn",
+    "subject": "trial_balance.csv:11",
+    "message": "1210 moved +44% vs prior (11,800,000 -> 17,007,700)",
+    "facts": {}
+  },
+  {
+    "code": "PRIOR_LARGE_MOVE",
+    "severity": "warn",
+    "subject": "trial_balance.csv:22",
+    "message": "2150 moved +33% vs prior (-315,000 -> -420,000)",
+    "facts": {}
+  },
+  {
+    "code": "PRIOR_LARGE_MOVE",
+    "severity": "warn",
+    "subject": "trial_balance.csv:31",
+    "message": "3200 moved +40% vs prior (-5,180,000 -> -7,240,000)",
+    "facts": {}
+  },
+  {
+    "code": "PRIOR_LARGE_MOVE",
+    "severity": "warn",
+    "subject": "trial_balance.csv:32",
+    "message": "3310 moved +89% vs prior (-95,000 -> -180,000)",
+    "facts": {}
+  },
+  {
+    "code": "FX_RATE_MISSING",
+    "severity": "block",
+    "subject": "trial_balance.csv:4",
+    "message": "no period_end rate for GBP; row left untranslated",
+    "facts": {
+      "currency": "GBP",
+      "native": "412300.00"
+    }
+  },
+  {
+    "code": "TB_OUT_OF_BALANCE",
+    "severity": "block",
+    "subject": "trial_balance.csv",
+    "message": "credits exceed debits by 338,687.00 after translation",
+    "facts": {
+      "difference": "-338687.00"
+    }
+  }
+]
